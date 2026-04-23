@@ -2,6 +2,8 @@
 
 > **TL;DR** — Curve V1 blends a *straight line* (constant sum) with a *hyperbola* (constant product) to give low slippage near the peg but still protect the pool from being drained. Curve V2 is the same equation, but with one extra knob (γ, gamma) that **sharpens** the blend so liquidity concentrates around any chosen price — not just 1:1.
 
+> **New here?** If the symbols below (`A`, `K₀`, `D`, `x`, `y`) feel like random letters, skim [reading-the-graph.md](./reading-the-graph.md) first — it grounds every symbol before the math. Then, to *see* it, follow [desmos-walkthrough.md](./desmos-walkthrough.md).
+
 ---
 
 ## Table of Contents
@@ -286,7 +288,7 @@ If you want to go deeper, these are excellent next steps:
 
 - **Curve V1 whitepaper** — "StableSwap" by Michael Egorov (2019).
 - **Curve V2 whitepaper** — "Automatic market-making with dynamic peg" by Michael Egorov (2021).
-- **Desmos graphing calculator** — paste `A*K*D*(x+y) + x*y = A*K*D^2 + (D/2)^2` and `K = (x*y)/((D/2)^2) * (g/(g + 1 - (x*y)/((D/2)^2)))^2` and play with sliders for `A`, `D`, and `g`. Watching the curve change as you move γ is the fastest way to *feel* concentrated liquidity.
+- **[desmos-walkthrough.md](./desmos-walkthrough.md)** — build Curve V1 in Desmos one layer at a time, with sliders for `A`, `D`, and `γ`. Watching the curve change as you move the sliders is the fastest way to *feel* concentrated liquidity.
 - **Uniswap V3 docs** — another take on concentrated liquidity (range orders instead of a smooth curve). Useful contrast.
 
 > **Tip for understanding:** copy Curve V1's equation into Desmos first, then change `K₀` to `K` and add the γ term step-by-step. Watching each change's effect on the graph makes the math click faster than reading any paper.
