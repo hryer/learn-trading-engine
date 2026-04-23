@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:blog.bytemonk.io)",
+      "Bash(awk '{ print length, $0 }' /Users/hryer/Code/learn-hft/hft-architecture.md)"
+    ]
+  }
+}
